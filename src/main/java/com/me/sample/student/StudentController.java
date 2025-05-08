@@ -1,5 +1,6 @@
 package com.me.sample.student;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,9 +13,19 @@ public class StudentController {
 
     @GetMapping
 
-    public List<String> findAllStudents() {
+    public List<Student> findAllStudents() {
         return List.of(
-                "may name",
-                "hey yall");
+                new Student(
+                        "abebe",
+                        "Beso",
+                        LocalDate.now(),
+                        "contact@mail.com",
+                        34),
+                new Student(
+                        "abebe",
+                        "Beso",
+                        LocalDate.now(),
+                        "contact@mail.com",
+                        34));
     }
 }
